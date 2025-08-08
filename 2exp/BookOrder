@@ -1,0 +1,30 @@
+class BookOrder {
+   String customerName;
+   String bookTitle;
+   double price;
+   static String storeName = "Readers' Haven";
+
+   BookOrder() {
+      this.customerName = "Guest";
+      this.bookTitle = "Unknown Book";
+      this.price = 300.0;
+   }
+
+   BookOrder(String var1, String var2, double var3) {
+      this.customerName = var1;
+      this.bookTitle = var2;
+      this.price = var3;
+   }
+
+   void displayOrder() {
+      System.out.println("Customer: " + this.customerName);
+      System.out.println("Book Title: " + this.bookTitle);
+      System.out.println("Price: â‚¹" + this.price);
+      System.out.println("Store: " + storeName);
+      System.out.println("-----------------------------");
+   }
+
+   static void changeStoreName(String var0) {
+      storeName = var0;
+   }
+}
