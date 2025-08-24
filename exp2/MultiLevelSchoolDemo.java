@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Person {
     String name;
     int age;
@@ -35,9 +37,19 @@ class GraduateStudent extends Student {
 
 public class MultiLevelSchoolDemo {
     public static void main(String[] args) {
-        GraduateStudent gradStudent = new GraduateStudent("Bob", 24);
+        Scanner sc= new Scanner(System.in);
+
+        System.out.print("Enter graduate student name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter graduate student age: ");
+        int age = sc.nextInt();
+
+        GraduateStudent gradStudent = new GraduateStudent(name, age);
+
         gradStudent.displayInfo();
         gradStudent.study();
         gradStudent.research();
+        sc.close();
     }
 }

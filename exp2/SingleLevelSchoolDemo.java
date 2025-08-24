@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Person {
     String name;
     int age;
@@ -25,8 +27,18 @@ class Student extends Person {
 
 public class SingleLevelSchoolDemo {
     public static void main(String[] args) {
-        Student student = new Student("Alice", 20);
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter student name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter student age: ");
+        int age = sc.nextInt();
+
+        Student student = new Student(name, age);
+
         student.displayInfo();
         student.study();
+        sc.close();
     }
 }
